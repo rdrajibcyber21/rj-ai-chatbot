@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJ AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <button class="new-chat" onclick="newChat()">+ New Chat</button>
+        <div id="chat-list"></div>
+    </div>
+
+    <!-- Chat Area -->
+    <div class="chat-container">
+
+        <!-- Header with Logo -->
+        <div class="header">
+            <img src="user.png" class="header-logo">
+            <span>RJ AI</span>
+        </div>
+
+        <!-- Chat -->
+        <div id="chat-box"></div>
+
+        <!-- Input -->
+        <div class="input-area">
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="Send a message..."
+                onkeypress="if(event.key==='Enter') sendMessage()"
+            />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
